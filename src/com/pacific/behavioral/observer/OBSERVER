@@ -1,0 +1,5 @@
+This patterns defines One to Many relationship between objects so that if one object changes it state, all its dependent are notified
+automatically.
+Publisher-Subscriber pattern
+1- Social Network - When a person updates his status – all his followers gets the notification.
+2- All messaging brokers like ActiveMQ
