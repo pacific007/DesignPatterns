@@ -1,0 +1,21 @@
+Flyweight is used when there is a need to create high number of objects of almost similar nature. 
+High number of objects consumes high memory and flyweight design pattern gives a solution to reduce the load on memory by
+sharing objects. 
+ It is achieved by segregating object properties into two types intrinsic and extrinsic. 
+ 
+ Consider a simple text editor where we can use only alphabet set A to Z. If we are going to create 100 page document 
+ using this editor we may have 200000 (2000 X 100) characters (assuming 2000 characters / page). Without flyweight we 
+ will create 200000 objects to have fine grained control. With such fine control, every character can have its own 
+ characteristics like color, font, size, etc.
+ 
+ How do we apply flyweight here?
+
+Intrinsic and Extrinsic State
+Create only 26 objects for (A to Z) mapping every unique characters. These 26 objects will have intrinsic state as 
+its character. That is object ‘a’ will have state as character ‘a’. Then what happens to color, font and size?
+Those are the extrinsic state and will be passed by client code. 26 objects will be in store,
+client code will get the needed character/object and pass the extrinsic state to it with respect to the context.
+With respect to context means, ‘a’ in first line may come in red color and the same character may come in blue color 
+in different line.
+
+ 
