@@ -1,0 +1,13 @@
+GoF definition for facade design pattern is, “Provide a unified interface to a set of interfaces in a subsystem. 
+Facade Pattern defines a higher-level interface that makes the subsystem easier to use.”
+
+1- Starting car involves multiple steps but it only opens simple interface to rider by just applying key, it starts.
+2- When you order pizza, which internally evolves many steps to bake pizza but for you it just simplifies by ordering only.
+3- A booking system example 
+
+Let us consider an example of booking a package . Usually when you try to book a package  , the ticket booking system interacts with many of subsystems. The various sub-systems may be flight , hotel and  cab booking . In addition this may also interact with many other sub systems.
+
+In this case instead of client having the overhead of interacting with various other subsystems , we can introduce a facade 
+layer  which interacts will all these subsystems. Finally once it get the response from all the subsystems, it aggregates
+all these response and send the response back to the client.
+
