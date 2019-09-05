@@ -1,0 +1,31 @@
+package com.pacific.behavioral.visitor;
+
+/**
+ * 
+ * @author pragangw1
+ *
+ */
+class Book implements CartElement {
+
+	private int price;
+	private String isbnNumber;
+
+	public Book(int cost, String isbn) {
+		this.price = cost;
+		this.isbnNumber = isbn;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public String getIsbnNumber() {
+		return isbnNumber;
+	}
+
+	@Override
+	public int accept(ShoppingCartVisitor visitor) {
+		return visitor.visit(this);
+	}
+
+}
